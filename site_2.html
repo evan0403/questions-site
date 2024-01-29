@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Questions</title>
+    <style>
+
+        @font-face {
+            font-family: 'editoral-regular';
+            src: url('editorial-new-regular copy.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'lausanne';
+            src: url('Lausanne-Regular.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'tiny';
+            src: url('TINY5x3-140 copy.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'migra';
+            src: url('Migra-Italic- Extrabold.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family:'boogie';
+            src: url('Boogie.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'gt';
+            src: url('GT-America-Regular.otf'), format('opentype');
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'lausanne', sans-serif;
+            font-weight: 500;
+            font-size: 64px;
+            text-align: center;
+            padding-top: 36px;
+            color: #c8ff00;
+        }
+
+        .interrogative-word {
+            font-family: 'editoral-regular', serif;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+        }
+
+        .eyes {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .eye {
+            width: 95px;
+            height: 95px;
+            background-color: rgb(255, 255, 255);
+            display: inline-block;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            margin: 60px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .eyeball {
+            width: 30px;
+            height: 30px;
+            background-color: #c8ff00;
+            border-radius: 50%;
+            border: 20px solid #031b14;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            animation: eyeball 5s infinite;
+        }
+
+        @keyframes eyeball {
+            0% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            25% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-100%, 0%);
+            }
+
+            50% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            75% {
+                top: 50%;
+                left: 100%;
+                transform: translate(-85%, -85%);
+            }
+
+            100% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .eyelid {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 1;
+        }
+
+        .eyelid span {
+            display: block;
+            width: 100%;
+            height: 20%;
+            background-color: #000000;
+            border-radius: 0 0 60% 60%;
+            animation: eyelid 3s infinite;
+        }
+
+        @keyframes eyelid {
+            0% {
+                height: 10%;
+            }
+
+            10% {
+                height: 100%;
+            }
+
+            20% {
+                height: 0%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+
+        .question-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .question {
+    font-family: 'tiny';
+    color: #fff;
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; 
+        }
+        
+
+        .question a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the color of the parent element (white in this case) */
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+}
+
+        .question:nth-child(1) {
+            font-family: 'lausanne', sans-serif;
+            color: #ff7ced;
+            animation: bounceLeftRight 5s infinite;
+        }
+
+        .question:nth-child(2) {
+            font-family: 'boogie', serif;
+            color: #FFE600;
+            animation: bounceUpDown 7s infinite;
+        }
+
+        .question:nth-child(3) {
+            color: #B8B8FF;
+        animation: bounceDiagonal 6s infinite;
+        }
+
+        .question:nth-child(4) {
+        font-family: 'gt', sans-serif;
+        color: #2DBC94;
+        animation: bounceRandom 8s infinite;
+        }
+
+        .question:nth-child(5) {
+        font-family: 'migra', serif;
+        color: #FF5200;
+        animation: bounceSpiral 8s infinite;
+        }
+
+        .question:nth-child(6) {
+        font-family:  'editoral-regular';
+        color: #0D75FF;
+        animation: bounceHeartbeat 8s infinite;
+        }
+
+
+        @keyframes bounceLeftRight {
+            0%, 100% {
+                left: 50%;
+            }
+
+            25% {
+                left: 10%;
+            }
+
+            50% {
+                left: 90%;
+            }
+
+            75% {
+                left: 10%;
+            }
+        }
+
+        @keyframes bounceUpDown {
+            0%, 100% {
+                top: 50%;
+            }
+
+            25% {
+                top: 10%;
+            }
+
+            50% {
+                top: 60%;
+            }
+
+            75% {
+                top: 10%;
+            }
+        }
+
+    @keyframes bounceDiagonal {
+        0%, 100% {
+            top: 50%;
+            left: 50%;
+        }
+
+        25% {
+            top: 10%;
+            left: 90%;
+        }
+
+        50% {
+            top: 70%;
+            left: 10%;
+        }
+
+        75% {
+            top: 50%;
+            left: 10%;
+        }
+    }
+
+    @keyframes bounceRandom {
+        0%, 100% {
+            top: 50%;
+            left: 50%;
+        }
+
+        25% {
+            top: 80%;
+            left: 20%;
+        }
+
+        50% {
+            top: 30%;
+            left: 70%;
+        }
+
+        75% {
+            top: 60%;
+            left: 40%;
+        }
+    }
+
+    @keyframes bounceSpiral {
+        0%, 100% {
+            top: 20%;
+            left: 50%;
+        }
+
+        25% {
+            top: 10%;
+            left: 50%;
+        }
+
+        50% {
+            top: 90%;
+            left: 90%;
+        }
+
+        75% {
+            top: 50%;
+            left: 10%;
+        }
+    }
+
+    @keyframes bounceHeartbeat {
+    0%, 100% {
+        top: 50%;
+        left: 70%;
+    }
+
+    25% {
+        top: 10%;
+        left: 23%;
+    }
+
+    50% {
+        top: 90%;
+        left: 60%;
+    }
+
+    75% {
+        top: 50%;
+        left: 10%;
+    }
+}
+    
+</style>
+
+/* html below */
+
+</head>
+<body>
+    <div class="title">
+        <h1>Most Asked Questions on Google for <span class="interrogative-word">“How”</span></h1>
+    </div>
+    <div class="eyes">
+        <div class="eye">
+            <div class="eyelid">
+                <span></span>
+            </div>
+            <div class="eyeball"></div>
+        </div>
+
+        <div class="eye">
+            <div class="eyelid">
+                <span></span>
+            </div>
+            <div class="eyeball"></div>
+        </div>
+    </div>
+
+    <div class="question-container">
+
+        <a href="https://www.google.com/search?q=how+to+draw&oq=how+to+draw&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQs4NDYwMjk2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8" class="question">How to draw?</a>
+
+        <a href="https://www.google.com/search?q=How+many+ounces+in+a+cup&oq=How+many+ounces+in+a+cup&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQBhhAMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEHNjA2ajBqOagCALACAA&sourceid=chrome&ie=UTF-8" class="question">How many ounces in a cup?</a>
+
+        <a href="https://www.google.com/search?q=How+to+screenshot+on+Mac%3F&oq=How+to+screenshot+on+Mac%3F&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBBzY2MmowajmoAgCwAgA&sourceid=chrome&ie=UTF-8" class="question">How to screenshot on Mac?</a>
+
+        <a href="https://www.google.com/search?q=how+many+week+sin+a+year&oq=how+many+week+sin+a+year&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTINCAEQABgKGA0YExiABDIKCAIQABgNGBMYHjIKCAMQABgNGBMYHjIMCAQQABgIGA0YExgeMg4IBRAAGAgYChgNGBMYHjIMCAYQABgIGA0YExgeMgwIBxAAGAgYDRgTGB4yDAgIEAAYCBgNGBMYHjIMCAkQABgIGA0YExge0gEINDg3NmowajmoAgCwAgA&sourceid=chrome&ie=UTF-8" class="question">How many weeks in a year?</a>
+
+        <a href="https://www.google.com/search?q=how+to+tie+a+tie&oq=how+to+tie+&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABKgCALACAA&sourceid=chrome&ie=UTF-8" class="question">How to tie a tie?</a>
+
+        <a href="https://www.google.com/search?q=how+long+does+covid+last&oq=how+long+does+covi&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABKgCALACAA&sourceid=chrome&ie=UTF-8" class="question">How long does Covid last?</a>
+    </div>
+    </div>
+</body>
+</html>
+
+

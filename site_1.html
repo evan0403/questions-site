@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Questions</title>
+    <style>
+
+@font-face {
+    font-family: 'pp';
+    src: url('editorial-new.otf') format('opentype');;
+}
+
+@font-face {
+    font-family: 'editorial';
+    src: url('editorial-new-regular.otf') format('opentype');;
+}
+
+@font-face {
+    font-family: 'lausanne';
+    src: url('Lausanne-Regular.otf') format('opentype');;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    margin: 0;
+    font-family: 'pp', serif;
+    overflow:hidden;
+}
+
+
+        h1 {
+            font-family: 'lausanne', sans-serif;
+            font-size: 64px;
+            text-align: center;
+            padding-top: 36px;
+            color: #333;
+        }
+
+        .interrogative-word {
+            font-family: 'editorial', serif;
+        }
+
+
+    .question {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+    .question:hover {
+    transform: scale(5) rotate(15deg);
+    background-color: #010101;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+        /* Define positions for each question */
+        .question.one { top: 20%; left: 60%; background-color: #e74c3c; }
+        .question.two { top: 50%; left: 60%; background-color: #2DBC94; }
+        .question.three { top: 70%; left: 40%; background-color: #9161F2; }
+        .question.four { top: 30%; left: 80%; background-color: #FFE600; color:#333 }
+        .question.five { top: 23%; left: 10%; background-color: #0D75FF; }
+        .question.six { top: 75%; left: 20%; background-color: #B8B8FF; color:#333}
+        .question.seven { top: 40%; left: 27%; background-color: #FF5200; }
+        .question.eight { top: 80%; left: 70%; background-color: #1B3644; }
+        .question.nine { top: 60%; left: 50%; background-color: #ff7ced; color:#333}
+        
+
+         /* Define different hover positions for each question */
+        .question.one:hover { transform: scale(5) rotate(30deg); }
+        .question.two:hover { transform: scale(5) rotate(-15deg); }
+        .question.three:hover { transform: scale(5) rotate(10deg); }
+        .question.four:hover { transform: scale(5) rotate(-30deg); }
+        .question.five:hover { transform: scale(5) rotate(20deg); }
+        .question.six:hover { transform: scale(5) rotate(-25deg); }
+        .question.seven:hover { transform: scale(5) rotate(35deg); }
+        .question.eight:hover { transform: scale(5) rotate(-10deg); }
+        .question.nine:hover { transform: scale(5) rotate(50deg); }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        .background {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: 1s;
+        }
+       
+       
+        .question.one:hover ~ .background {
+            background-image: url('0361b8ef0efe9c4d116abb9ca6518ae6ad584d66-1500x1000.gif');
+            background-size: 145%;
+            background-position: 50% 40%;
+        }
+        .question.two:hover ~ .background {
+            background-image: url('hourglass.gif');
+            background-size: 20%;
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+
+        }
+
+        .question.three:hover ~ .background {
+            background-image: url('3D-Glasses.gif');
+            background-size: cover;
+        }
+
+        .question.four:hover ~ .background {
+            background-image: url('windshieldrain.gif');
+            background-size: cover;
+        }
+        .question.five:hover ~ .background {
+            background-image: url('sunset.gif');
+            background-size: cover;
+        }
+        .question.six:hover ~ .background {
+            background-image: url('a93cbaa0c9b82e5.gif');
+            background-size: cover;
+            background-position: 50% 40%;
+        }
+        .question.seven:hover ~ .background {
+            background-image: url('momentus-lights.gif');
+            background-size: cover;
+        }
+
+        .question.eight:hover ~ .background {
+            background-image: url('giphy-2.gif');
+            background-size: cover;
+        }
+
+        .question.nine:hover ~ .background {
+            background-image: url('original.gif.mp4');
+            background-color: #F19FD1;
+            background-size: 20%;
+            background-position: 50% 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Most Asked Questions on Google for <span class="interrogative-word">“What”</span></h1>
+
+    
+        
+        <a href="https://www.google.com/search?q=What+is+my+ip" class="question one" target="_blank">What is my IP 🌐 ?</a>
+        <a href="https://www.google.com/search?q=What+time+is+it" class="question two" target="_blank">What time is it 🕥 ?</a>
+        <a href="https://www.google.com/search?q=What+on+tv+tonight" class="question three" target="_blank">What to watch 📺 ?</a>
+        <a href="https://www.google.com/search?q=Whats+the+weather" class="question four" target="_blank">What's the weather ☁️ ?</a>
+        <a href="https://www.google.com/search?q=What+time+is+sunset" class="question five" target="_blank">What time is sunset 🌇 ?</a>
+        <a href="https://www.google.com/search?q=What+song+is+this" class="question six" target="_blank">What song is this 🎵?</a>
+        <a href="https://www.google.com/search?q=What+holiday+is+today" class="question seven" target="_blank">What holiday is today 🎉 ?</a>
+        <a href="https://www.google.com/search?q=What+time+is+it+in+california" class="question eight" target="_blank">What time is it in California 🌴 ?</a>
+        <a href="https://www.google.com/search?q=what+are+the+5+love+languages&sca_esv=600614933&sxsrf=ACQVn09Znl1IhvNrou0Y1XqgRrzdJFLfhA%3A1705977009717&ei=sSSvZcW6K4TjkPIPwby7mAw&ved=0ahUKEwiF16LNu_KDAxWEMUQIHUHeDsMQ4dUDCBA&uact=5&oq=what+are+the+5+love+languages&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXdoYXQgYXJlIHRoZSA1IGxvdmUgbGFuZ3VhZ2VzMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMg0QLhjHARjRAxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnSIkFUABYhgNwAXgBkAEAmAEAoAEAqgEAuAEDyAEA-AEB-AECqAIK4gMEGAAgQQ&sclient=gws-wiz-serp" class="question nine" target="_blank">What are 5 love languages ❤️ ?</a>
+
+        <div class="background"></div>
+</body>
+</html>
